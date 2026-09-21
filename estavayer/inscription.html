@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription en ligne — Fit-Style Estavayer-le-Lac</title>
+  <meta name="description" content="Inscrivez-vous en ligne au centre Fit-Style de Estavayer-le-Lac : choix de l'abonnement, coordonnées, contrat et paiement.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0A0A0C">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fit-Style Fitness">
+  <meta property="og:locale" content="fr_CH">
+  <meta property="og:title" content="Inscription en ligne — Fit-Style Estavayer-le-Lac">
+  <meta property="og:description" content="Inscrivez-vous en ligne au centre Fit-Style de Estavayer-le-Lac : choix de l'abonnement, coordonnées, contrat et paiement.">
+  <meta property="og:url" content="https://fit-style.ch/estavayer/inscription.html">
+  <meta property="og:image" content="https://fit-style.ch/assets/img/commun/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <div class="centre-bar">
+    <div class="container centre-bar__inner">
+      <span><strong>Fit-Style Estavayer-le-Lac</strong> · Route de la Scie 1, 1470 Estavayer-le-Lac</span>
+      <span class="centre-bar__links">
+        <a href="tel:+41266771818">026 677 18 18</a>
+        <a href="../index.html">Changer de centre</a>
+      </span>
+    </div>
+  </div>
+
+  <header class="header header--centre" data-header>
+    <div class="header__inner">
+      <a class="header__logo" href="index.html" aria-label="Fit-Style Estavayer-le-Lac — accueil">
+        <img src="../assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" fetchpriority="high">
+        <span class="header__centre">Estavayer-le-Lac</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation du centre de Estavayer-le-Lac">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Accueil</a></li>
+          <li><a class="nav__link" href="cours.html">Cours</a></li>
+          <li><a class="nav__link" href="coaching.html">Coaching</a></li>
+          <li><a class="nav__link" href="abonnements.html">Abonnements</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--sm" href="inscription.html">S'inscrire</a>
+        <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
+    <nav aria-label="Navigation mobile">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cours.html">Cours</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="abonnements.html">Abonnements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="inscription.html">S'inscrire en ligne</a></li>
+        <li><a href="../index.html">← Changer de centre</a></li>
+      </ul>
+    </nav>
+    <p class="mobile-nav__meta">
+      Fit-Style Estavayer-le-Lac<br>
+      Route de la Scie 1, 1470 Estavayer-le-Lac<br>
+      <a href="tel:+41266771818">026 677 18 18</a> · <a href="mailto:estavayer@fit-style.ch">estavayer@fit-style.ch</a>
+    </p>
+  </div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Fit-Style Estavayer-le-Lac</a></li>
+          <li>Inscription</li>
+        </ol>
+        <h1>Inscription<br>à Estavayer-le-Lac</h1>
+        <p class="lead" style="max-width:54ch">Cinq minutes suffisent : votre formule, vos coordonnées, puis la signature et le paiement.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container--narrow">
+
+        <ol class="steps" data-step-indicator aria-label="Étapes de l'inscription">
+          <li data-state="current">1. Abonnement</li>
+          <li>2. Coordonnées</li>
+          <li>3. Récapitulatif</li>
+          <li>4. Contrat</li>
+          <li>5. Paiement</li>
+          <li>6. Confirmation</li>
+        </ol>
+
+        <form novalidate>
+        <div class="wizard" data-wizard>
+          <!-- Centre fixé par le parcours : le visiteur a choisi sa salle à l'entrée du site -->
+          <input type="radio" name="centre" value="estavayer" data-name="Estavayer-le-Lac" checked hidden>
+
+          <!-- ÉTAPE 1 — ABONNEMENT -->
+          <section class="wizard__step" data-step="1">
+            <h2>Choisissez votre abonnement</h2>
+            <p>Abonnement au centre de Estavayer-le-Lac, valable également dans notre second centre.</p>
+            <h3 style="margin:1.6rem 0 .7rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-dim)">12 mois</h3>
+            <div class="choice">
+              <label>
+                <input type="radio" name="abonnement" value="adulte-12" data-name="Adultes — 12 mois" data-price="790.–" data-duration="12 mois" data-terms="Mensualités 79.–/mois ou 2 × 395.–. Rabais fidélité 2e année : 740.–">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 12 mois</span>
+                  <span class="choice__price">790.–</span>
+                  <span class="choice__desc">Mensualités 79.–/mois ou 2 × 395.–. Rabais fidélité 2e année : 740.–</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="etudiant-12" data-name="Étudiants · AVS/AI — 12 mois" data-price="640.–" data-duration="12 mois" data-terms="Mensualités 64.–/mois ou 2 × 320.–">
+                <span class="choice__inner">
+                  <span class="choice__name">Étudiants · AVS/AI — 12 mois</span>
+                  <span class="choice__price">640.–</span>
+                  <span class="choice__desc">Mensualités 64.–/mois ou 2 × 320.–</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="kids-12" data-name="Kids — 12 mois" data-price="500.–" data-duration="12 mois" data-terms="Mensualités 50.–/mois ou 2 × 250.–">
+                <span class="choice__inner">
+                  <span class="choice__name">Kids — 12 mois</span>
+                  <span class="choice__price">500.–</span>
+                  <span class="choice__desc">Mensualités 50.–/mois ou 2 × 250.–</span>
+                </span>
+              </label>
+            </div>
+            <h3 style="margin:1.6rem 0 .7rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-dim)">3 mois</h3>
+            <div class="choice">
+              <label>
+                <input type="radio" name="abonnement" value="adulte-3" data-name="Adultes — 3 mois" data-price="290.–" data-duration="3 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 3 mois</span>
+                  <span class="choice__price">290.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="etudiant-3" data-name="Étudiants · AVS/AI — 3 mois" data-price="290.–" data-duration="3 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Étudiants · AVS/AI — 3 mois</span>
+                  <span class="choice__price">290.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="kids-3" data-name="Kids — 3 mois" data-price="250.–" data-duration="3 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Kids — 3 mois</span>
+                  <span class="choice__price">250.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+            </div>
+            <h3 style="margin:1.6rem 0 .7rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-dim)">1 mois</h3>
+            <div class="choice">
+              <label>
+                <input type="radio" name="abonnement" value="adulte-1" data-name="Adultes — 1 mois" data-price="110.–" data-duration="1 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 1 mois</span>
+                  <span class="choice__price">110.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="etudiant-1" data-name="Étudiants · AVS/AI — 1 mois" data-price="110.–" data-duration="1 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Étudiants · AVS/AI — 1 mois</span>
+                  <span class="choice__price">110.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="kids-1" data-name="Kids — 1 mois" data-price="110.–" data-duration="1 mois" data-terms="Paiement unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Kids — 1 mois</span>
+                  <span class="choice__price">110.–</span>
+                  <span class="choice__desc">Paiement unique</span>
+                </span>
+              </label>
+            </div>
+            <h3 style="margin:1.6rem 0 .7rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-dim)">Cartes d'entrées</h3>
+            <div class="choice">
+              <label>
+                <input type="radio" name="abonnement" value="adulte-20" data-name="Adultes — 20 entrées" data-price="300.–" data-duration="20 entrées" data-terms="Validité 8 mois">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 20 entrées</span>
+                  <span class="choice__price">300.–</span>
+                  <span class="choice__desc">Validité 8 mois</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="adulte-10" data-name="Adultes — 10 entrées" data-price="180.–" data-duration="10 entrées" data-terms="Validité 6 mois">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 10 entrées</span>
+                  <span class="choice__price">180.–</span>
+                  <span class="choice__desc">Validité 6 mois</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="kids-10" data-name="Kids — 10 entrées" data-price="180.–" data-duration="10 entrées" data-terms="Validité 6 mois">
+                <span class="choice__inner">
+                  <span class="choice__name">Kids — 10 entrées</span>
+                  <span class="choice__price">180.–</span>
+                  <span class="choice__desc">Validité 6 mois</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="adulte-1e" data-name="Adultes — 1 entrée" data-price="20.–" data-duration="1 entrée" data-terms="Entrée unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Adultes — 1 entrée</span>
+                  <span class="choice__price">20.–</span>
+                  <span class="choice__desc">Entrée unique</span>
+                </span>
+              </label>
+              <label>
+                <input type="radio" name="abonnement" value="kids-1e" data-name="Kids — 1 entrée" data-price="20.–" data-duration="1 entrée" data-terms="Entrée unique">
+                <span class="choice__inner">
+                  <span class="choice__name">Kids — 1 entrée</span>
+                  <span class="choice__price">20.–</span>
+                  <span class="choice__desc">Entrée unique</span>
+                </span>
+              </label>
+            </div>
+            <p class="field__error" data-step-error></p>
+            <div class="wizard__nav">
+              <span></span>
+              <button class="btn" type="button" data-next>Continuer</button>
+            </div>
+          </section>
+
+          <!-- ÉTAPE 2 — COORDONNÉES -->
+          <section class="wizard__step" data-step="2" hidden>
+            <h2>Vos informations</h2>
+            <div class="form">
+              <div class="form__row">
+                <div class="field">
+                  <label for="i-prenom">Prénom *</label>
+                  <input id="i-prenom" name="prenom" type="text" autocomplete="given-name" required>
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label for="i-nom">Nom *</label>
+                  <input id="i-nom" name="nom" type="text" autocomplete="family-name" required>
+                  <span class="field__error"></span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="i-naissance">Date de naissance *</label>
+                <input id="i-naissance" name="naissance" type="date" autocomplete="bday" required>
+                <span class="field__error"></span>
+              </div>
+              <div class="field">
+                <label for="i-adresse">Adresse *</label>
+                <input id="i-adresse" name="adresse" type="text" autocomplete="street-address" required>
+                <span class="field__error"></span>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label for="i-npa">NPA *</label>
+                  <input id="i-npa" name="npa" type="text" inputmode="numeric" autocomplete="postal-code" required>
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label for="i-ville">Ville *</label>
+                  <input id="i-ville" name="ville" type="text" autocomplete="address-level2" required>
+                  <span class="field__error"></span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label for="i-tel">Téléphone *</label>
+                  <input id="i-tel" name="telephone" type="tel" autocomplete="tel" required>
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label for="i-email">E-mail *</label>
+                  <input id="i-email" name="email" type="email" autocomplete="email" required>
+                  <span class="field__error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="wizard__nav">
+              <button class="btn btn--ghost" type="button" data-prev>Retour</button>
+              <button class="btn" type="button" data-next>Continuer</button>
+            </div>
+          </section>
+
+          <!-- ÉTAPE 3 — RÉCAPITULATIF -->
+          <section class="wizard__step" data-step="3" hidden>
+            <h2>Récapitulatif</h2>
+            <div class="recap">
+              <div class="recap__row"><span>Centre</span><span data-recap="centre">Estavayer-le-Lac</span></div>
+              <div class="recap__row"><span>Abonnement</span><span data-recap="abonnement">—</span></div>
+              <div class="recap__row"><span>Durée</span><span data-recap="duree">—</span></div>
+              <div class="recap__row"><span>Conditions</span><span data-recap="conditions">—</span></div>
+              <div class="recap__row"><span>Titulaire</span><span data-recap="nom">—</span></div>
+              <div class="recap__row"><span>Adresse</span><span data-recap="adresse">—</span></div>
+              <div class="recap__row"><span>E-mail</span><span data-recap="email">—</span></div>
+              <div class="recap__row"><span>Téléphone</span><span data-recap="telephone">—</span></div>
+              <div class="recap__total"><span>Montant</span><span data-recap="prix">—</span></div>
+            </div>
+            <p class="form__note mt-4">Frais éventuels (carte de membre, ouverture de dossier) : <span class="todo">À confirmer</span></p>
+            <div class="wizard__nav">
+              <button class="btn btn--ghost" type="button" data-prev>Retour</button>
+              <button class="btn" type="button" data-next>Passer au contrat</button>
+            </div>
+          </section>
+
+          <!-- ÉTAPE 4 — CONTRAT -->
+          <section class="wizard__step" data-step="4" hidden>
+            <h2>Contrat et conditions</h2>
+            <div class="contract-box" tabindex="0" aria-label="Texte du contrat">
+              <p><strong>Contrat d'abonnement Fit-Style — Estavayer-le-Lac</strong></p>
+              <p><span class="todo">Texte contractuel officiel à intégrer</span> — durée, renouvellement, résiliation, suspension, règlement intérieur, protection des données et conditions de paiement doivent être fournis par Fit-Style et validés juridiquement avant la mise en ligne.</p>
+              <p>Le contrat définitif sera généré automatiquement avec les données saisies aux étapes précédentes, puis mis à disposition en PDF.</p>
+            </div>
+            <div class="form mt-4">
+              <label class="checkbox">
+                <input type="checkbox" name="cgv" required>
+                <span>J'ai lu et j'accepte les <a class="link-arrow" href="../cgv.html" target="_blank" rel="noopener">conditions générales</a> et le règlement intérieur. *</span>
+              </label>
+              <span class="field__error"></span>
+              <label class="checkbox">
+                <input type="checkbox" name="donnees" required>
+                <span>J'accepte le traitement de mes données pour la gestion de mon abonnement. *</span>
+              </label>
+              <span class="field__error"></span>
+            </div>
+            <div class="notice mt-4">
+              <strong>Signature électronique — à connecter.</strong> Cocher ces cases enregistre votre acceptation, mais ne constitue pas une signature électronique qualifiée au sens du droit suisse (SCSE). L'intégration d'un prestataire de signature est prévue dans l'architecture du site.
+            </div>
+            <div class="wizard__nav">
+              <button class="btn btn--ghost" type="button" data-prev>Retour</button>
+              <button class="btn" type="button" data-next>Continuer vers le paiement</button>
+            </div>
+          </section>
+
+          <!-- ÉTAPE 5 — PAIEMENT -->
+          <section class="wizard__step" data-step="5" hidden>
+            <h2>Paiement</h2>
+            <div class="recap">
+              <div class="recap__row"><span>Abonnement</span><span data-recap="abonnement">—</span></div>
+              <div class="recap__total"><span>À régler</span><span data-recap="prix">—</span></div>
+            </div>
+            <div class="notice mt-4">
+              <strong>Module de paiement non connecté.</strong> Aucune transaction n'est effectuée ni simulée sur cette version. L'architecture prévoit une redirection vers un prestataire de paiement sécurisé (carte bancaire, TWINT et, selon le choix final, facturation par virement). Aucune donnée bancaire ne transite ni n'est stockée sur ce site. Le mode de paiement définitif et la gestion des mensualités restent <span class="todo">À confirmer</span>
+            </div>
+            <div class="wizard__nav">
+              <button class="btn btn--ghost" type="button" data-prev>Retour</button>
+              <button class="btn" type="button" data-next>Voir l'étape de confirmation</button>
+            </div>
+          </section>
+
+          <!-- ÉTAPE 6 — CONFIRMATION -->
+          <section class="wizard__step" data-step="6" hidden>
+            <div class="confirm">
+              <div class="confirm__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h2>Bienvenue chez Fit-Style</h2>
+              <p class="lead">Voici le récapitulatif de votre inscription au centre de Estavayer-le-Lac.</p>
+            </div>
+            <div class="recap">
+              <div class="recap__row"><span>Centre</span><span data-recap="centre">Estavayer-le-Lac</span></div>
+              <div class="recap__row"><span>Abonnement</span><span data-recap="abonnement">—</span></div>
+              <div class="recap__row"><span>Titulaire</span><span data-recap="nom">—</span></div>
+              <div class="recap__row"><span>E-mail</span><span data-recap="email">—</span></div>
+            </div>
+            <h3 class="mt-5">Prochaines étapes</h3>
+            <ul class="ticks">
+              <li>Un e-mail de confirmation vous est envoyé avec votre contrat.</li>
+              <li>Votre badge d'accès vous est remis à la réception de Estavayer-le-Lac.</li>
+              <li>Votre instruction gratuite est planifiée avec un coach.</li>
+              <li>Vos accès à l'espace membre vous sont transmis pour réserver vos cours.</li>
+            </ul>
+            <div class="notice mt-4">
+              <strong>Écran de démonstration.</strong> L'e-mail de confirmation et la création du compte membre seront déclenchés côté serveur une fois le backend et Gest-Fit connectés.
+            </div>
+            <div class="wizard__nav">
+              <a class="btn btn--ghost" href="index.html">Retour à l'accueil</a>
+              <a class="btn" href="cours.html">Voir les cours</a>
+            </div>
+          </section>
+
+        </div>
+        </form>
+
+        <p class="form__note mt-4">
+          Une question avant de vous inscrire ? Appelez le centre au <a href="tel:+41266771818">026 677 18 18</a> ou passez simplement à la réception.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="../assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" loading="lazy">
+          <p style="font-size:.92rem">Centre de Estavayer-le-Lac<br>850 m² d'entraînement</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61553354889698" target="_blank" rel="noopener" aria-label="Fit-Style sur Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/fitstyle_fitness/" target="_blank" rel="noopener" aria-label="Fit-Style sur Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 1.8.25 2.2.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.4.36 1 .42 2.2.06 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.25 1.8-.42 2.2a3.8 3.8 0 0 1-.9 1.38 3.8 3.8 0 0 1-1.38.9c-.4.17-1 .36-2.2.42-1.2.06-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-1.8-.25-2.2-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.4-.36-1-.42-2.2C2.25 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.25-1.8.42-2.2.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1a3.5 3.5 0 0 0-.84-1.3 3.5 3.5 0 0 0-1.3-.84c-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4Zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.1-.9a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Adresse</h4>
+          <address>
+            Route de la Scie 1<br>
+            1470 Estavayer-le-Lac<br>
+            <a href="tel:+41266771818">026 677 18 18</a><br>
+            <a href="mailto:estavayer@fit-style.ch">estavayer@fit-style.ch</a>
+          </address>
+          <p style="margin-top:.8rem"><a class="link-arrow" href="../index.html">Changer de centre</a></p>
+        </div>
+
+        <div>
+          <h4>Horaires</h4>
+          <div class="hours__row"><span>Tous les jours</span><span><span class="todo">À confirmer</span></span></div>
+          <h4 style="margin-top:1.2rem">Réception</h4>
+          <div class="hours__row"><span>Lundi – vendredi</span><span>8h00 – 12h00 / 17h00 – 20h30</span></div>
+          <div class="hours__row"><span>Samedi</span><span>9h30 – 11h30</span></div>
+          <div class="hours__row"><span>Dimanche</span><span>Fermé</span></div>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cours.html">Cours collectifs</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="abonnements.html">Abonnements</a></li>
+            <li><a href="inscription.html">S'inscrire en ligne</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Espace membre</h4>
+          <ul>
+            <li><a href="https://fitstyle-ell.gest-fit.ch/identification.php" target="_blank" rel="noopener">Cours collectifs</a></li>
+            <li><a href="https://staubin.fit-style.ch/boutique/" target="_blank" rel="noopener">Boutique &amp; bons cadeaux</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p style="margin:0">© <span data-year>2026</span> Fit-Style Fitness — Tous droits réservés.</p>
+        <nav aria-label="Liens légaux">
+          <a href="../mentions-legales.html">Mentions légales</a>
+          <a href="../confidentialite.html">Confidentialité</a>
+          <a href="../cgv.html">CGV</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Actions rapides">
+    <a href="tel:+41266771818">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Appeler
+    </a>
+    <a href="contact.html#essai">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Essayer
+    </a>
+    <a class="is-primary" href="inscription.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+      S'inscrire
+    </a>
+  </nav>
+
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/forms.js" defer></script>
+  <script src="../assets/js/inscription.js" defer></script>
+</body>
+</html>

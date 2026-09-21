@@ -386,9 +386,64 @@ body.nav-open { overflow: hidden; }
   .nav, .header__actions .btn { display: none; }
   .burger { display: grid; margin-left: auto; }
   .mobile-bar { display: flex; gap: .3rem; }
-  body { padding-bottom: 72px; } /* espace pour la barre CTA fixe */
+  body:has(.mobile-bar) { padding-bottom: 72px; } /* espace pour la barre CTA fixe */
 }
 
 @media (min-width: 961px) {
   .mobile-nav { display: none; }
+}
+
+/* ==========================================================================
+   Barre de centre (rappel du centre sélectionné) + en-tête dédié
+   ========================================================================== */
+:root { --bar-h: 38px; }
+
+.centre-bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 101;
+  height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  background: #07070A;
+  border-bottom: 1px solid var(--c-line-soft);
+  font-size: .78rem;
+  color: var(--c-dim);
+}
+.centre-bar__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; }
+.centre-bar strong { color: var(--c-muted); font-weight: 600; }
+.centre-bar__links { display: flex; gap: 1.1rem; flex: 0 0 auto; }
+.centre-bar a { color: var(--c-muted); transition: color var(--t-fast); }
+.centre-bar a:hover { color: var(--c-text); }
+
+.header--centre { top: var(--bar-h); }
+
+.header__logo { display: flex; align-items: center; gap: .7rem; }
+.header__centre {
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  padding-left: .7rem;
+  border-left: 1px solid var(--c-line);
+  white-space: nowrap;
+}
+
+.btn--clu { border-color: rgba(226, 18, 28, .55); color: var(--c-text); }
+.btn--clu:hover { background: var(--c-red-soft); border-color: var(--c-red); }
+
+/* Décalages liés à la barre de centre */
+html { scroll-padding-top: calc(var(--header-h) + var(--bar-h) + 12px); }
+
+@media (max-width: 1100px) {
+  .centre-bar__inner > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+@media (max-width: 960px) {
+  :root { --bar-h: 0px; }
+  .centre-bar { display: none; }
+  .header--centre { top: 0; }
+  .header__centre { display: none; }
 }
