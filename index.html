@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fit-Style Fitness — Salle de fitness à Saint-Aubin et Estavayer-le-Lac</title>
+  <meta name="description" content="Fit-Style Fitness : deux centres dans la Broye, à Saint-Aubin et Estavayer-le-Lac. Musculation, cardio, cours collectifs, coaching et wellness. Première séance d'essai gratuite.">
+  <link rel="canonical" href="https://fit-style.ch/">
+  <meta name="theme-color" content="#0A0A0C">
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fit-Style Fitness">
+  <meta property="og:locale" content="fr_CH">
+  <meta property="og:title" content="Fit-Style Fitness — Salle de fitness à Saint-Aubin et Estavayer-le-Lac">
+  <meta property="og:description" content="Fit-Style Fitness : deux centres dans la Broye, à Saint-Aubin et Estavayer-le-Lac. Musculation, cardio, cours collectifs, coaching et wellness. Première séance d'essai gratuite.">
+  <meta property="og:url" content="https://fit-style.ch/">
+  <meta property="og:image" content="https://fit-style.ch/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Polices : 2 familles, poids limités. Option recommandée en production :
+       auto-héberger les .woff2 pour supprimer les requêtes tierces. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="preload" as="image" href="assets/img/fitstyle-hero.jpg" fetchpriority="high">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://fit-style.ch/#organisation",
+        "name": "Fit-Style Fitness",
+        "url": "https://fit-style.ch/",
+        "logo": "https://fit-style.ch/assets/img/logo-fit-style.png",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61553354889698",
+          "https://www.instagram.com/fitstyle_fitness/"
+        ]
+      },
+      {
+        "@type": "HealthClub",
+        "@id": "https://fit-style.ch/saint-aubin.html#centre",
+        "name": "Fit-Style Fitness — Saint-Aubin",
+        "parentOrganization": { "@id": "https://fit-style.ch/#organisation" },
+        "url": "https://fit-style.ch/saint-aubin.html",
+        "telephone": "+41266771808",
+        "email": "staubin@fit-style.ch",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Les Vernettes 10",
+          "postalCode": "1566",
+          "addressLocality": "Saint-Aubin",
+          "addressRegion": "FR",
+          "addressCountry": "CH"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 46.8822572, "longitude": 6.9898686 },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "05:00", "closes": "23:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "05:00", "closes": "20:00" }
+        ]
+      },
+      {
+        "@type": "HealthClub",
+        "@id": "https://fit-style.ch/estavayer.html#centre",
+        "name": "Fit-Style Fitness — Estavayer-le-Lac",
+        "parentOrganization": { "@id": "https://fit-style.ch/#organisation" },
+        "url": "https://fit-style.ch/estavayer.html",
+        "telephone": "+41266771818",
+        "email": "estavayer@fit-style.ch",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Route de la Scie 1",
+          "postalCode": "1470",
+          "addressLocality": "Estavayer-le-Lac",
+          "addressRegion": "FR",
+          "addressCountry": "CH"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a class="header__logo" href="index.html" aria-label="Fit-Style Fitness — accueil">
+        <img src="assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" fetchpriority="high">
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Accueil</a></li>
+          <li><a class="nav__link" href="index.html#centres">Nos centres</a></li>
+          <li><a class="nav__link" href="cours.html">Cours</a></li>
+          <li><a class="nav__link" href="coaching.html">Coaching</a></li>
+          <li><a class="nav__link" href="abonnements.html">Abonnements</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost btn--sm" href="cours.html#espace-membre">Espace membre</a>
+        <a class="btn btn--sm" href="inscription.html">S'inscrire</a>
+        <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
+    <nav aria-label="Navigation mobile">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="index.html#centres">Nos centres</a></li>
+        <li><a href="cours.html">Cours</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="abonnements.html">Abonnements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="saint-aubin.html">→ Centre de Saint-Aubin</a></li>
+        <li><a href="estavayer.html">→ Centre d'Estavayer-le-Lac</a></li>
+        <li><a href="inscription.html">S'inscrire en ligne</a></li>
+      </ul>
+    </nav>
+    <p class="mobile-nav__meta">
+      Saint-Aubin · <a href="tel:+41266771808">026 677 18 08</a><br>
+      Estavayer-le-Lac · <a href="tel:+41266771818">026 677 18 18</a><br>
+      <a href="cours.html#espace-membre">Espace membre / réservation de cours</a>
+    </p>
+  </div>
+
+  <main id="main">
+
+    <!-- ================================================== HERO ========== -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="assets/img/fitstyle-hero.jpg" alt="Espace d'entraînement Fit-Style Fitness" width="1920" height="1080" fetchpriority="high">
+      </div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">Votre fitness.<br>Votre rythme.<br><span>Vos objectifs.</span></h1>
+        <p class="hero__text lead">
+          Deux centres dans la Broye — Saint-Aubin et Estavayer-le-Lac — avec un seul abonnement,
+          un accompagnement par des professionnels brevetés et des cours collectifs toute la semaine.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#centres">Découvrir nos centres</a>
+          <a class="btn btn--ghost" href="inscription.html">Je m'inscris</a>
+        </div>
+        <div class="hero__centres">
+          <a href="saint-aubin.html">Saint-Aubin</a>
+          <a href="estavayer.html">Estavayer-le-Lac</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ CHOIX DU CENTRE ===== -->
+    <section class="section" id="centres">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Nos centres</span>
+          <h2>Choisissez votre centre</h2>
+          <p class="lead">Deux salles à quelques minutes l'une de l'autre, accessibles avec le même abonnement.</p>
+        </div>
+
+        <div class="grid grid--2">
+
+          <article class="centre-card reveal">
+            <div class="centre-card__img">
+              <img src="assets/img/centre-saint-aubin.jpg" alt="Le centre Fit-Style de Saint-Aubin" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="centre-card__body">
+              <h3 class="centre-card__title">Saint-Aubin <span class="badge">1200 m²</span></h3>
+              <div class="centre-card__meta">
+                <span>Les Vernettes 10, 1566 Saint-Aubin (FR)</span>
+                <span><strong>Salle :</strong> lu–ve 5h00–23h00 · sa–di 5h00–20h00</span>
+                <span><strong>Téléphone :</strong> <a href="tel:+41266771808">026 677 18 08</a></span>
+              </div>
+              <ul class="centre-card__tags">
+                <li>Musculation</li><li>Cardio</li><li>Cours collectifs</li>
+                <li>Wellness · sauna &amp; hammam</li><li>Solarium</li><li>Espace enfant</li><li>Parking gratuit</li>
+              </ul>
+              <p style="font-size:.92rem">Salle Hyrox et Cross-Training <strong>Level-Up Cross</strong> située juste en dessous du fitness.</p>
+              <div class="centre-card__actions">
+                <a class="btn btn--sm" href="saint-aubin.html">Découvrir Saint-Aubin</a>
+                <a class="btn btn--ghost btn--sm" href="saint-aubin.html#horaires">Voir les horaires</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="centre-card reveal">
+            <div class="centre-card__img">
+              <img src="assets/img/centre-estavayer.jpg" alt="Le centre Fit-Style d'Estavayer-le-Lac" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="centre-card__body">
+              <h3 class="centre-card__title">Estavayer-le-Lac <span class="badge">850 m²</span></h3>
+              <div class="centre-card__meta">
+                <span>Route de la Scie 1, 1470 Estavayer-le-Lac</span>
+                <span><strong>Salle :</strong> <span class="todo">Horaires à confirmer</span></span>
+                <span><strong>Téléphone :</strong> <a href="tel:+41266771818">026 677 18 18</a></span>
+              </div>
+              <ul class="centre-card__tags">
+                <li>Musculation</li><li>Cardio</li><li>2 salles de cours collectifs</li><li>Parking gratuit</li>
+              </ul>
+              <p style="font-size:.92rem">Plus de 60 postes de musculation et 25 postes cardio, équipement Technogym.</p>
+              <div class="centre-card__actions">
+                <a class="btn btn--sm" href="estavayer.html">Découvrir Estavayer</a>
+                <a class="btn btn--ghost btn--sm" href="estavayer.html#horaires">Voir les horaires</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================ ARGUMENT ======== -->
+    <section class="section claim">
+      <div class="container reveal">
+        <h2 class="claim__title">1 abonnement.<br><em>2 centres.</em></h2>
+        <p class="lead">
+          Votre abonnement Fit-Style vous donne accès à nos deux salles, à Saint-Aubin et à Estavayer-le-Lac.
+          Il ouvre également l'accès au groupe <strong>Leader Fitness</strong> et à ses centres partenaires en
+          Suisse romande, selon le règlement d'accès en vigueur.
+        </p>
+        <div class="hero__cta" style="justify-content:center">
+          <a class="btn" href="abonnements.html">Voir les abonnements</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================= SERVICES ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ce que vous trouvez chez nous</span>
+          <h2>Tout pour s'entraîner sérieusement</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/musculation.jpg" alt="Espace musculation Fit-Style" width="1000" height="700" loading="lazy"></div>
+            <div class="card__body"><h3>Musculation</h3><p>Machines guidées et poids libres pour développer la force, renforcer les articulations et sculpter sa silhouette.</p></div>
+          </article>
+
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/cardio.jpg" alt="Espace cardio Fit-Style" width="1000" height="700" loading="lazy"></div>
+            <div class="card__body"><h3>Cardio</h3><p>Vélos, tapis, rameurs, steppers, elliptiques, AMT et Wave pour travailler l'endurance à son rythme.</p></div>
+          </article>
+
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/cours-collectifs.jpg" alt="Cours collectif chez Fit-Style" width="1200" height="800" loading="lazy"></div>
+            <div class="card__body"><h3>Cours collectifs</h3><p>Pilates, yoga, spinning, pump, HIIT, TRX, CAF, step et bien d'autres, dans les deux centres.</p></div>
+          </article>
+
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/coaching.jpg" alt="Coaching personnalisé Fit-Style" width="1200" height="800" loading="lazy"></div>
+            <div class="card__body"><h3>Coaching &amp; personal training</h3><p>Un personal trainer certifié au niveau fédéral et une instruction gratuite comprise dans l'abonnement.</p></div>
+          </article>
+
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/wellness.jpg" alt="Espace wellness avec sauna et hammam" width="1000" height="700" loading="lazy"></div>
+            <div class="card__body"><h3>Wellness <span class="badge">Saint-Aubin</span></h3><p>Sauna, hammam et espace de repos, accessibles sur demande selon les plages horaires du centre.</p></div>
+          </article>
+
+          <article class="card card--media reveal">
+            <div class="card__img"><img src="assets/img/cross-training.jpg" alt="Salle de Cross-Training et Hyrox Level-Up Cross" width="1000" height="700" loading="lazy"></div>
+            <div class="card__body"><h3>Cross-Training &amp; Hyrox <span class="badge">Saint-Aubin</span></h3><p>Level-Up Cross, dédiée au Cross-Training et à l'Hyrox, se trouve juste en dessous du fitness.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ POURQUOI FIT-STYLE == -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pourquoi Fit-Style</span>
+          <h2>Un fitness de quartier, avec de vrais professionnels</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card reveal">
+            <h3>Deux centres, un abonnement</h3>
+            <p>Saint-Aubin et Estavayer-le-Lac, plus l'accès aux centres du groupe Leader Fitness selon règlement.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Personnel qualifié</h3>
+            <p>Collaborateurs avec CFC et brevet fédéral d'instructeur fitness, et un personal trainer certifié au niveau fédéral.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Certification FSCFS</h3>
+            <p>Centre certifié FSCFS / SFGV, reconnu par certaines assurances complémentaires. Une participation est possible : renseignez-vous auprès de votre caisse.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Matériel Technogym</h3>
+            <p>Plus de 60 postes de musculation et plus de 25 postes cardio par centre, dans des locaux spacieux et lumineux.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Parking gratuit</h3>
+            <p>Les deux centres sont faciles d'accès et disposent de places de parc gratuites.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Espace enfant <span class="badge">Saint-Aubin</span></h3>
+            <p>Un espace pour accueillir les enfants pendant votre entraînement, surveillé le lundi, le mercredi et le vendredi matin de 9h30 à 11h00.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ COURS COLLECTIFS ==== -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="assets/img/cours-collectifs.jpg" alt="Salle de cours collectifs Fit-Style" width="1200" height="800" loading="lazy">
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Cours collectifs</span>
+            <h2>Des cours pour tous les objectifs</h2>
+            <p>Du renforcement au cardio, de la mobilité au dépassement : les cours sont compris dans l'abonnement et se réservent en ligne.</p>
+            <ul class="ticks">
+              <li><strong>Renforcement</strong> — Pump, CAF, Bodysculpt, Abdos-Killer, TRX</li>
+              <li><strong>Cardio &amp; intensité</strong> — Spinning, HIIT, Tabata, Step, Hiit Boxing, Zumba</li>
+              <li><strong>Mobilité &amp; posture</strong> — Pilates, Yoga, Yoga Flow, Stretching</li>
+            </ul>
+            <p class="mt-4"><a class="btn" href="cours.html">Voir le planning des cours</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================= COACHING ======= -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__media reveal">
+            <img src="assets/img/coaching.jpg" alt="Séance de coaching chez Fit-Style" width="1200" height="800" loading="lazy">
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Coaching</span>
+            <h2>Vous ne savez pas par où commencer ?</h2>
+            <p>
+              C'est le cas de la plupart des personnes qui poussent notre porte. Chaque abonnement comprend
+              une instruction gratuite : un professionnel vous montre les machines, adapte les charges et
+              construit avec vous un premier programme réaliste.
+            </p>
+            <p>Pour aller plus loin, nos coachs proposent un suivi personnalisé en personal training.</p>
+            <p class="mt-4"><a class="btn" href="coaching.html">Découvrir le coaching</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================== SÉANCE DÉCOUVERTE ==== -->
+    <section class="section" id="essai">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Séance découverte</span>
+          <h2>Testez Fit-Style</h2>
+          <p class="lead">La première session d'essai est gratuite. Choisissez votre centre, laissez vos coordonnées : nous vous recontactons pour fixer le rendez-vous.</p>
+        </div>
+
+        <form class="form reveal" data-form novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="essai-prenom">Prénom *</label>
+              <input id="essai-prenom" name="prenom" type="text" autocomplete="given-name" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="essai-nom">Nom *</label>
+              <input id="essai-nom" name="nom" type="text" autocomplete="family-name" required>
+              <span class="field__error"></span>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="essai-email">E-mail *</label>
+              <input id="essai-email" name="email" type="email" autocomplete="email" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="essai-tel">Téléphone *</label>
+              <input id="essai-tel" name="telephone" type="tel" autocomplete="tel" required>
+              <span class="field__error"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="essai-centre">Centre souhaité *</label>
+            <select id="essai-centre" name="centre" required>
+              <option value="">Choisir un centre…</option>
+              <option value="saint-aubin">Saint-Aubin</option>
+              <option value="estavayer">Estavayer-le-Lac</option>
+            </select>
+            <span class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="essai-message">Message (facultatif)</label>
+            <textarea id="essai-message" name="message" rows="4" placeholder="Vos objectifs, vos disponibilités…"></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" name="consentement" required>
+            <span>J'accepte que mes données soient utilisées pour traiter ma demande. *</span>
+          </label>
+          <span class="field__error"></span>
+          <button class="btn btn--block" type="submit">Réserver ma séance découverte</button>
+          <p class="form__note">* Champs obligatoires. Vos données ne sont ni revendues ni utilisées à d'autres fins.</p>
+          <div class="form-status" data-form-status></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- =============================================== PARTENAIRES ====== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Ils nous soutiennent</span>
+          <h2>Nos partenaires</h2>
+        </div>
+        <ul class="partners reveal">
+          <li>La Mobilière</li><li>Wago</li><li>Elsa</li><li>Aldi</li><li>Nespresso</li>
+          <li>RSSB</li><li>HIB</li><li>Vita-Forme</li>
+        </ul>
+        <p class="text-center mt-4" style="font-size:.85rem"><span class="todo">À remplacer par les logos officiels + liste partenaires à confirmer</span></p>
+      </div>
+    </section>
+
+    <!-- ================================================= CTA FINAL ====== -->
+    <section class="section cta-band">
+      <div class="container reveal">
+        <h2>Prêt à commencer ?</h2>
+        <p class="lead" style="max-width:52ch;margin-inline:auto">Dès 79.– par mois en abonnement annuel adulte, cours collectifs compris.</p>
+        <div class="hero__cta">
+          <a class="btn" href="inscription.html">M'inscrire en ligne</a>
+          <a class="btn btn--ghost" href="#essai">Essayer gratuitement</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" loading="lazy">
+          <p style="font-size:.92rem">Deux centres de fitness dans la Broye, à Saint-Aubin et à Estavayer-le-Lac.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61553354889698" target="_blank" rel="noopener" aria-label="Fit-Style sur Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8Z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/fitstyle_fitness/" target="_blank" rel="noopener" aria-label="Fit-Style sur Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 1.8.25 2.2.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.4.36 1 .42 2.2.06 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.25 1.8-.42 2.2a3.8 3.8 0 0 1-.9 1.38 3.8 3.8 0 0 1-1.38.9c-.4.17-1 .36-2.2.42-1.2.06-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-1.8-.25-2.2-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.4-.36-1-.42-2.2C2.25 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.25-1.8.42-2.2.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1a3.5 3.5 0 0 0-.84-1.3 3.5 3.5 0 0 0-1.3-.84c-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4Zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.1-.9a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Saint-Aubin</h4>
+          <address>
+            Les Vernettes 10<br>
+            1566 Saint-Aubin (FR)<br>
+            <a href="tel:+41266771808">026 677 18 08</a><br>
+            <a href="mailto:staubin@fit-style.ch">staubin@fit-style.ch</a>
+          </address>
+          <p style="font-size:.88rem;margin-top:.8rem">Salle : lu–ve 5h00–23h00<br>sa–di 5h00–20h00</p>
+        </div>
+
+        <div>
+          <h4>Estavayer-le-Lac</h4>
+          <address>
+            Route de la Scie 1<br>
+            1470 Estavayer-le-Lac<br>
+            <a href="tel:+41266771818">026 677 18 18</a><br>
+            <a href="mailto:estavayer@fit-style.ch">estavayer@fit-style.ch</a>
+          </address>
+          <p style="font-size:.88rem;margin-top:.8rem">Salle : <span class="todo">Horaires à confirmer</span></p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="saint-aubin.html">Centre de Saint-Aubin</a></li>
+            <li><a href="estavayer.html">Centre d'Estavayer-le-Lac</a></li>
+            <li><a href="cours.html">Cours collectifs</a></li>
+            <li><a href="coaching.html">Coaching</a></li>
+            <li><a href="abonnements.html">Abonnements</a></li>
+            <li><a href="inscription.html">S'inscrire en ligne</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Espace membre</h4>
+          <ul>
+            <li><a href="https://fitstyle-sta.gest-fit.ch/identification.php?IDR=1" target="_blank" rel="noopener">Réservation — Saint-Aubin</a></li>
+            <li><a href="https://crosslevelup.gest-fit.ch/identification.php" target="_blank" rel="noopener">Réservation — Cross &amp; Kids</a></li>
+            <li><a href="https://fitstyle-ell.gest-fit.ch/identification.php" target="_blank" rel="noopener">Réservation — Estavayer</a></li>
+            <li><a href="https://staubin.fit-style.ch/boutique/" target="_blank" rel="noopener">Boutique &amp; bons cadeaux</a></li>
+            <li><a href="https://cross-level-up.ch/" target="_blank" rel="noopener">Level-Up Cross (Hyrox)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p style="margin:0">© <span data-year>2026</span> Fit-Style Fitness — Tous droits réservés.</p>
+        <nav aria-label="Liens légaux">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barre d'action fixe, mobile uniquement -->
+  <nav class="mobile-bar" aria-label="Actions rapides">
+    <a href="tel:+41266771808">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Appeler
+    </a>
+    <a href="contact.html#essai">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Essayer
+    </a>
+    <a class="is-primary" href="inscription.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+      S'inscrire
+    </a>
+  </nav>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>
