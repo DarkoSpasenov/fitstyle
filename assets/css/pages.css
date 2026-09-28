@@ -487,194 +487,108 @@
 
 /* ==========================================================================
    Page d'entrée — choix du centre
-   Objectif : tenir dans une seule fenêtre, sur téléphone comme sur bureau.
-   Les tailles sont exprimées en vh pour s'adapter à la hauteur d'écran.
+   Mise en page volontairement simple : flux normal + une grille.
+   Aucune hauteur imposée, rien ne peut se replier en colonnes.
    ========================================================================== */
-body:has(.chooser) { overflow: hidden; padding-bottom: 0; }
-
-.chooser {
-  height: 100vh;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding-block: clamp(.7rem, 2.4vh, 2rem);
+.pick {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 5vh, 3.5rem) var(--gutter);
   background:
-    radial-gradient(70% 80% at 50% 0%, rgba(226, 18, 28, .18) 0%, rgba(226, 18, 28, 0) 62%),
+    radial-gradient(60% 55% at 50% 0%, rgba(226, 18, 28, .20) 0%, rgba(226, 18, 28, 0) 65%),
     var(--c-bg);
 }
 
-/* --------------------------------------------------------------- en-tête */
-.chooser__head {
-  flex: 0 0 auto;
+.pick__inner {
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  padding-inline: var(--gutter);
 }
-.chooser__logo {
-  height: clamp(28px, 5.4vh, 58px);
+
+.pick__logo {
+  height: clamp(44px, 10vw, 76px);
   width: auto;
-  margin: 0 auto clamp(.5rem, 1.6vh, 1.3rem);
+  margin: 0 auto clamp(1.2rem, 4vw, 2rem);
 }
-.chooser__head h1 {
-  font-size: clamp(1.3rem, 4.1vh, 2.9rem);
+
+.pick__title {
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
   text-transform: uppercase;
-  margin-bottom: .25rem;
-}
-.chooser__head p {
-  font-size: clamp(.78rem, 1.7vh, 1.05rem);
-  max-width: 54ch;
-  margin: 0 auto;
-  color: var(--c-muted);
+  letter-spacing: -.01em;
+  margin-bottom: clamp(1.3rem, 4vw, 2.2rem);
 }
 
-/* ---------------------------------------------------------------- panneaux */
-.chooser__grid {
-  flex: 1 1 auto;
-  min-height: 0;
+/* ---------------------------------------------------------------- cartes */
+.pick__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(.6rem, 1.6vh, 1.3rem);
-  padding: clamp(.8rem, 2.2vh, 1.7rem) var(--gutter) 0;
-  max-width: 1320px;
-  width: 100%;
-  margin-inline: auto;
+  gap: clamp(.9rem, 2.5vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  align-items: stretch;
 }
 
-.chooser__panel {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  min-height: 0;
-  border: 1px solid var(--c-line-soft);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  background: var(--c-surface);
-  transition: border-color var(--t-base), transform var(--t-base);
-}
-.chooser__panel:hover { border-color: rgba(255, 255, 255, .24); transform: translateY(-3px); }
-.chooser__panel:focus-within { border-color: var(--c-red); }
-
-.chooser__bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .7s ease;
-}
-.chooser__panel:hover .chooser__bg { transform: scale(1.05); }
-.chooser__panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(10, 10, 12, .35) 0%, rgba(10, 10, 12, .75) 45%, rgba(10, 10, 12, .96) 100%);
-}
-
-.chooser__content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
+.pick__card {
   display: flex;
   flex-direction: column;
-  gap: clamp(.2rem, .7vh, .5rem);
-  padding: clamp(.9rem, 2.4vh, 1.9rem);
+  align-items: center;
+  gap: .55rem;
+  padding: clamp(1.4rem, 4vw, 2.1rem) clamp(1.1rem, 3vw, 1.8rem);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line-soft);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-base), transform var(--t-base);
 }
-.chooser__badge { align-self: flex-start; font-size: clamp(.6rem, 1.2vh, .7rem); }
-.chooser__name {
+.pick__card:hover { border-color: rgba(255, 255, 255, .2); transform: translateY(-3px); }
+
+.pick__name {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.25rem, 3.7vh, 2.4rem);
-  line-height: 1.02;
-  letter-spacing: -.02em;
+  font-size: clamp(1.15rem, 3.6vw, 1.6rem);
+  line-height: 1.1;
+  letter-spacing: -.01em;
   text-transform: uppercase;
   margin: 0;
 }
-.chooser__meta {
-  font-size: clamp(.72rem, 1.55vh, .95rem);
-  color: var(--c-muted);
-  margin: 0;
-  line-height: 1.45;
-}
-.chooser__meta--alt { color: var(--c-dim); }
+.pick__rule { display: block; width: 42px; height: 3px; border-radius: 2px; background: var(--c-red); }
 
-.chooser__cta {
-  margin-top: clamp(.5rem, 1.4vh, 1rem);
-  min-height: clamp(42px, 5.6vh, 52px);
-  font-size: clamp(.74rem, 1.5vh, .9rem);
-}
-/* toute la carte devient cliquable, sans imbriquer de liens */
-.chooser__cta::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.pick__meta { font-size: .88rem; color: var(--c-muted); margin: 0; line-height: 1.5; }
+.pick__meta--alt { color: var(--c-dim); margin-bottom: .55rem; }
 
-.chooser__clu {
-  position: relative;
-  z-index: 3;
-  margin-top: clamp(.4rem, 1.1vh, .8rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .35rem;
-  text-align: center;
-  padding: clamp(.45rem, 1.2vh, .7rem) .8rem;
-  border: 1px solid rgba(226, 18, 28, .5);
-  border-radius: var(--r-pill);
-  background: rgba(226, 18, 28, .12);
-  font-size: clamp(.68rem, 1.4vh, .82rem);
-  color: var(--c-muted);
-  transition: background var(--t-fast), color var(--t-fast);
+.pick__card .btn { margin-top: .25rem; }
+.pick__card .btn--ghost { border-color: rgba(226, 18, 28, .55); }
+.pick__card .btn--ghost:hover { background: var(--c-red-soft); border-color: var(--c-red); }
+
+.pick__member {
+  margin-top: .3rem;
+  font-size: .8rem;
+  color: var(--c-dim);
+  transition: color var(--t-fast);
 }
-.chooser__clu:hover { background: rgba(226, 18, 28, .25); color: var(--c-text); }
-.chooser__clu strong { color: var(--c-text); }
+.pick__member:hover { color: var(--c-text); }
 
 /* ------------------------------------------------------------- bas de page */
-.chooser__foot {
-  flex: 0 0 auto;
-  text-align: center;
-  padding: clamp(.6rem, 1.8vh, 1.3rem) var(--gutter) 0;
-}
-.chooser__claim {
-  font-size: clamp(.68rem, 1.45vh, .88rem);
+.pick__claim {
+  margin: clamp(1.3rem, 4vw, 2rem) auto 0;
+  max-width: 60ch;
+  font-size: .85rem;
   color: var(--c-muted);
-  max-width: 70ch;
-  margin: 0 auto;
 }
-.chooser__claim strong { color: var(--c-text); }
-.chooser__legal {
+.pick__claim strong { color: var(--c-text); }
+
+.pick__legal {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem 1.1rem;
+  gap: .5rem 1.2rem;
   justify-content: center;
-  margin-top: clamp(.35rem, 1vh, .8rem);
-  font-size: clamp(.65rem, 1.3vh, .78rem);
+  margin-top: 1rem;
+  font-size: .78rem;
 }
-.chooser__legal a { color: var(--c-dim); }
-.chooser__legal a:hover { color: var(--c-text); }
+.pick__legal a { color: var(--c-dim); }
+.pick__legal a:hover { color: var(--c-text); }
 
-/* ------------------------------------------------------- adaptations écran */
-@media (max-width: 860px) {
-  .chooser__grid { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
-  .chooser__panel::before {
-    background: linear-gradient(90deg, rgba(10, 10, 12, .92) 0%, rgba(10, 10, 12, .72) 55%, rgba(10, 10, 12, .45) 100%);
-  }
-  .chooser__content { padding: clamp(.8rem, 2vh, 1.4rem); }
+/* Les deux cartes gardent la même hauteur sur grand écran */
+@media (min-width: 720px) {
+  .pick__card { justify-content: flex-start; }
+  .pick__card .btn:first-of-type { margin-top: auto; }
 }
-
-/* Téléphone à l'horizontale ou petit portable : on allège l'en-tête */
-@media (max-height: 560px) {
-  .chooser__head p, .chooser__claim { display: none; }
-  .chooser__grid { grid-template-columns: 1fr 1fr; }
-  .chooser__meta--alt { display: none; }
-}
-
-/* Écrans très courts : on garde l'essentiel */
-@media (max-height: 420px) {
-  .chooser__logo { display: none; }
-  .chooser__legal { display: none; }
-}
-
-/* Accès direct à l'espace membre depuis la page de choix */
-.chooser__member { margin-top: clamp(.5rem, 1.3vh, .9rem); }
-.chooser__member span { color: var(--c-dim); }
-.chooser__member a { color: var(--c-muted); font-weight: 600; }
-.chooser__member a:hover { color: var(--c-red-hi); }
-@media (max-height: 420px) { .chooser__member { display: none; } }
