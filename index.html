@@ -23,7 +23,6 @@
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
-  <link rel="preload" as="image" href="assets/img/commun/choix-saint-aubin.jpg" fetchpriority="high">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,60 +84,43 @@
 <body>
   <a class="skip-link" href="#main">Aller au contenu principal</a>
 
-  <main id="main" class="chooser">
+  <main id="main" class="pick">
+    <div class="pick__inner">
 
-    <div class="chooser__head">
-      <img class="chooser__logo" src="assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" fetchpriority="high">
-      <h1>Choisissez votre centre</h1>
-      <p>Horaires, cours, tarifs et inscription : tout vous est présenté pour ce centre uniquement.</p>
-    </div>
+      <img class="pick__logo" src="assets/img/logo-fit-style-blanc.png" alt="Fit-Style Fitness" width="650" height="227" fetchpriority="high">
+      <h1 class="pick__title">Choisissez votre centre</h1>
 
-    <div class="chooser__grid">
-        <article class="chooser__panel reveal">
-          <img class="chooser__bg" src="assets/img/commun/choix-saint-aubin.jpg" alt="Centre Fit-Style de Saint-Aubin" width="1400" height="1000" fetchpriority="high">
-          <div class="chooser__content">
-            <span class="badge chooser__badge">1200 m²</span>
-            <h2 class="chooser__name">Saint-Aubin</h2>
-            <p class="chooser__meta">Les Vernettes 10 · 1566 Saint-Aubin (FR)</p>
-            <p class="chooser__meta chooser__meta--alt">lu–ve 5h00–23h00 · sa–di 5h00–20h00</p>
-            <a class="btn btn--block chooser__cta" href="saint-aubin/index.html">
-              Entrer <span aria-hidden="true">→</span>
-            </a>
-            <a class="chooser__clu" href="https://cross-level-up.ch/" target="_blank" rel="noopener">
-              <strong>Level-Up Cross</strong> — Hyrox &amp; Cross-Training <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </article>
-        <article class="chooser__panel reveal">
-          <img class="chooser__bg" src="assets/img/commun/choix-estavayer.jpg" alt="Centre Fit-Style de Estavayer-le-Lac" width="1400" height="1000" fetchpriority="high">
-          <div class="chooser__content">
-            <span class="badge chooser__badge">850 m²</span>
-            <h2 class="chooser__name">Estavayer-le-Lac</h2>
-            <p class="chooser__meta">Route de la Scie 1 · 1470 Estavayer-le-Lac</p>
-            <p class="chooser__meta chooser__meta--alt">Horaires de salle <span class="todo">à confirmer</span></p>
-            <a class="btn btn--block chooser__cta" href="estavayer/index.html">
-              Entrer <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-    </div>
+      <div class="pick__grid">
+          <article class="pick__card">
+            <h2 class="pick__name">Saint-Aubin</h2>
+            <span class="pick__rule" aria-hidden="true"></span>
+            <p class="pick__meta">Les Vernettes 10 · 1566 Saint-Aubin (FR)</p>
+            <p class="pick__meta pick__meta--alt">lu–ve 5h00–23h00 · sa–di 5h00–20h00</p>
+            <a class="btn btn--block" href="saint-aubin/index.html">Entrer sur le site</a>
+            <a class="btn btn--block btn--ghost" href="https://cross-level-up.ch/" target="_blank" rel="noopener">Cross Level-Up <span aria-hidden="true">↗</span></a>
+            <a class="pick__member" href="https://fitstyle-sta.gest-fit.ch/identification.php?IDR=1" target="_blank" rel="noopener">Espace membre <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="pick__card">
+            <h2 class="pick__name">Estavayer-le-Lac</h2>
+            <span class="pick__rule" aria-hidden="true"></span>
+            <p class="pick__meta">Route de la Scie 1 · 1470 Estavayer-le-Lac</p>
+            <p class="pick__meta pick__meta--alt">Horaires de salle <span class="todo">à confirmer</span></p>
+            <a class="btn btn--block" href="estavayer/index.html">Entrer sur le site</a>
+            <a class="pick__member" href="https://fitstyle-ell.gest-fit.ch/identification.php" target="_blank" rel="noopener">Espace membre <span aria-hidden="true">↗</span></a>
+          </article>
+      </div>
 
-    <div class="chooser__foot">
-      <p class="chooser__claim"><strong>1 abonnement · 2 centres</strong> — valable dans nos deux salles et chez Leader Fitness, selon le règlement d'accès.</p>
-      <nav aria-label="Espace membre" class="chooser__legal chooser__member">
-        <span>Espace membre :</span>
-        <a href="https://fitstyle-sta.gest-fit.ch/identification.php?IDR=1" target="_blank" rel="noopener">Saint-Aubin <span aria-hidden="true">↗</span></a>
-        <a href="https://fitstyle-ell.gest-fit.ch/identification.php" target="_blank" rel="noopener">Estavayer <span aria-hidden="true">↗</span></a>
-      </nav>
-      <nav aria-label="Liens légaux" class="chooser__legal">
+      <p class="pick__claim"><strong>1 abonnement · 2 centres</strong> — valable dans nos deux salles et chez Leader Fitness, selon le règlement d'accès.</p>
+
+      <nav class="pick__legal" aria-label="Liens utiles">
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="confidentialite.html">Confidentialité</a>
         <a href="cgv.html">CGV</a>
         <a href="https://www.facebook.com/profile.php?id=61553354889698" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/fitstyle_fitness/" target="_blank" rel="noopener">Instagram</a>
       </nav>
-    </div>
 
+    </div>
   </main>
 
   <script src="assets/js/main.js" defer></script>
