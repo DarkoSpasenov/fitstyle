@@ -447,3 +447,59 @@ html { scroll-padding-top: calc(var(--header-h) + var(--bar-h) + 12px); }
   .header--centre { top: 0; }
   .header__centre { display: none; }
 }
+
+/* ==========================================================================
+   Accès membre : icône des boutons, actions du menu mobile
+   ========================================================================== */
+.btn__ico { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.btn--login { white-space: nowrap; }
+
+.centre-bar__clu {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  color: var(--c-red-hi) !important;
+  font-weight: 600;
+}
+.centre-bar__clu:hover { text-decoration: underline; }
+
+.mobile-nav__actions {
+  display: flex;
+  gap: .6rem;
+  margin-bottom: var(--sp-4);
+}
+.mobile-nav__actions .btn { flex: 1; }
+
+/* ==========================================================================
+   Défilement horizontal des cartes sur mobile
+   ========================================================================== */
+.scroller__hint { display: none; }
+
+@media (max-width: 760px) {
+  .scroller {
+    display: flex;
+    gap: .8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* les cartes touchent les bords de l'écran, comme une vraie galerie */
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    padding-bottom: .4rem;
+  }
+  .scroller::-webkit-scrollbar { display: none; }
+  .scroller > * {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+    max-width: 82%;
+  }
+  .scroller > *:last-child { margin-right: var(--gutter); }
+
+  .scroller__hint {
+    display: block;
+    margin-top: .9rem;
+    font-size: .78rem;
+    color: var(--c-dim);
+  }
+}
